@@ -3,6 +3,9 @@
     margin-top: 50px;
     height: 400px;
     margin-right: 2vw;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
 }
 .ttldesc {
     margin-top: 50px;
@@ -21,7 +24,46 @@
 }
 .slc {
     margin-top: 50px;
-    border: 1px solid black;
     margin-right: 1vw;
     margin-left: 3vw;
+}
+.slc1 {
+    border: 1px solid black;
+    border-radius: 2vw;
+    margin-top: 2.5vw;
+    background-image: url(Little\ Bird\ Toy\ Co\ Site\ Photos/block2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2.5vw;
+    width: 5vw;
+    margin-left: 1vw;
+}
+.slc2 {
+    border: 1px solid black;
+    border-radius: 2vw;
+    margin-top: 2vw;
+    background-image: url(Little\ Bird\ Toy\ Co\ Site\ Photos/block1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2.5vw;
+    width: 5vw;
+    margin-left: 1vw;
+}
+.slc3 {
+    border: 1px solid black;
+    border-radius: 2vw;
+    margin-top: 2vw;
+    background-image: url(Little\ Bird\ Toy\ Co\ Site\ Photos/block3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2.5vw;
+    width: 5vw;
+    margin-left: 1vw;
+}
+.but1 {
+    border: 0px;
+    background-color: transparent;
 }
