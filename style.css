@@ -1,0 +1,27 @@
+.displayimg {
+    border: 1px solid black;
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 2vw;
+}
+.ttldesc {
+    margin-top: 50px;
+}
+.ttl {
+    height: 150px;
+    border: 1px solid black;
+}
+.desc {
+    height: 250px;
+    border: 1px solid black;
+}
+.buy {
+    margin-top: 50px;
+    border: 1px solid black;
+}
+.slc {
+    margin-top: 50px;
+    border: 1px solid black;
+    margin-right: 1vw;
+    margin-left: 3vw;
+}
