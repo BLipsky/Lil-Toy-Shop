@@ -28,8 +28,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
-    <script src="products.js"></script>
+    <script src="script.js" defer></script>
+    <script src="products.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
       rel="stylesheet"
@@ -42,7 +42,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><img
-            src="Little Bird Toy Co Site Photos/Alternate Logo 1 (cropped).png"
+            src="LittleBirdToyCoSitePhotos/Alternate Logo 1 (cropped).png"
             alt="Bootstrap"
             class="navimgsizing"
         /></a>
@@ -109,45 +109,51 @@
         <div class="col-1 slc">
           <div class="container-fluid">
             <div class="row">
-              <button class="but1" id="b1" onclick=switchOne()>
+              <button class="but1" id="b1" onclick="switchOne()">
                 <div class="col-12 slc1" id="img1"></div>
-           </button></div></div>
-            <div class="container-fluid">
-              <div class="row">
-                <button class="but1" id="b2" onclick=switchTwo()>
-                <div class="col-12 slc2" id="img2"></div>
-              </button></div></div>        
-              <div class="container-fluid">
-                <div class="row">
-                  <button class="but1" id="b3" onclick=switchThree()>
-                  <div class="col-12 slc3" id="img3"></div>
-                </button></div></div>        
-    
+              </button>
+            </div>
           </div>
-          <img class="col-5 displayimg firstimg" id="mainimg" src="Little\ Bird\ Toy\ Co\ Site\ Photos/block2.jpg">
+          <div class="container-fluid">
+            <div class="row">
+              <button class="but1" id="b2" onclick="switchTwo()">
+                <div class="col-12 slc2" id="img2"></div>
+              </button>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <button class="but1" id="b3" onclick="switchThree()">
+                <div class="col-12 slc3" id="img3"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img class="col-5 displayimg firstimg" id="mainimg" src="LittleBirdToyCoSitePhotos/block2.jpg">
         <div class="col-3 ttldesc">
           <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 ttl" id="ttl"></div>
-          </div></div>
-          <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 desc">description</div>
+            <div class="row">
+              <div class="col-12 ttl" id="ttl"></div>
+            </div>
           </div>
-        </div></div>
-        <div class="col-2 buy">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 desc" id="dcs">description</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 buy" id="buy">
           buy info
         </div>
       </div>
     </div>
-
-
+    <select id="product-option">
+      <option value="block">block</option>
+      <option value="boat">boat</option>
+      <option value="car">car</option>
+      <option value="train">train</option>
+      <option value="plane">plane</option>
+      <option value="bar">bar</option>
+    </select>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"
-  ></script>
-  <script src="script.js"></script>
-  <script src="products.js"></script>
 </html>

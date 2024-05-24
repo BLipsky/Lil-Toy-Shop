@@ -1,17 +1,21 @@
 .displayimg {
     margin-top: 50px;
-    height: 400px;
+    height: 40vw;
     margin-right: 2vw;
+    border: .15vw solid black;
+    border-radius: 3vw;
+    background-color: rgb(255, 255, 255);
+    padding: 5vw;
 }
 .ttldesc {
     margin-top: 50px;
 }
 .ttl {
-    height: 150px;
+    height: 25vw;
     border: 1px solid black;
 }
 .desc {
-    height: 250px;
+    height: 15vw;
     border: 1px solid black;
 }
 .buy {
