@@ -50,7 +50,7 @@ var products = {
     side3: "LittleBirdToyCoSitePhotos/bar3.jpg",
     display: "LittleBirdToyCoSitePhotos/bar1.jpg",
     title: "'Snapz' Play Bars and Connectors",
-    description: "Discover endless creative possibilities with Snapz' Play Bars and Connectors, perfect for all ages at Little Bird Toy Shop. These versatile wooden pieces allow children to construct and design a variety of structures, encouraging imaginative play and problem-solving skills. Crafted from high-quality, eco-friendly wood, Snapz' ensures durability and safety for hours of engaging fun. Measures 3.5\" H x 7\" L x 7\" W.",
+    description: "These wooden pieces allow anyone to construct and design a variety of structures, encouraging imaginative play and problem-solving skills. Crafted from high-quality, eco-friendly wood, Snapz' ensures hours of engaging fun. Measures 3.5\" H x 7\" L x 7\" W.",
     age: "(Age: All Ages)"
   },
 };
