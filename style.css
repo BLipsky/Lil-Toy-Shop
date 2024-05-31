@@ -87,16 +87,17 @@ body, html {
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://picsum.photos/200/300");
+  background-image: url("https://www.shutterstock.com/image-vector/purple-cityscape-background-city-buildings-600nw-2296429971.jpg");
 
   /* Set a specific height */
-  height: 50%;
+  height: 60%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-size: 100% 100%;
 }
 
 /* Place text in the middle of the image */
@@ -236,7 +237,7 @@ body, html {
   }
   
   .checked {
-    color: rgb(255, 225, 0);
+    color: rgb(255, 234, 0);
   }
   
   #star {
