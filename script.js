@@ -40,7 +40,7 @@ const teamMembers = [
 function generateTeamCards() {
   const teamCardsContainer = document.getElementById("teamCards");
 
-  teamMembers.forEach((member) => {
+  teamMembers.forEach((member, index) => {
     const card = document.createElement("div");
     card.classList.add("col-md-4", "mb-4"); // Added 'mb-4' for margin bottom
 
@@ -59,10 +59,9 @@ function generateTeamCards() {
     teamCardsContainer.appendChild(card);
   });
 
-  document.querySelectorAll('.card-link').forEach(link => {
-    link.addEventListener('click', function(event) {
-      const itemValue = this.getAttribute('data-value');
-      localStorage.setItem('selectedItem', itemValue);
+  document.querySelectorAll('.card-link').forEach(card => {
+    card.addEventListener('click', function(event) {
+      localStorage.setItem('selectedToy', this.getAttribute('data-value'));
     });
   });
 }

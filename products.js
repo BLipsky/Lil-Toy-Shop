@@ -1,9 +1,9 @@
 var products = {
   block: {
-    side1: "LittleBirdToyCoSitePhotos/block2.jpg",
-    side2: "LittleBirdToyCoSitePhotos/block1.jpg",
+    side1: "LittleBirdToyCoSitePhotos/block1.jpg",
+    side2: "LittleBirdToyCoSitePhotos/block2.jpg",
     side3: "LittleBirdToyCoSitePhotos/block3.jpg",
-    display: "LittleBirdToyCoSitePhotos/block2.jpg",
+    display: "LittleBirdToyCoSitePhotos/block1.jpg",
     title: "Handcrafted Wooden Toy Building Block Set",
     description: "Build creativity and imagination with this high-quality, 60-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate (13” L x 12” W x 2” H).",
     age: "(Age: 3+)"
