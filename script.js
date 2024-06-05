@@ -121,3 +121,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('product-display').innerHTML = '<p>No item selected</p>';
   }
 });
+
+import React from 'react';
+import FlockingBirdsBackground from 'flocking-birds-background';
+
+const App = () => {
+  return (
+    <div className="App">
+      <FlockingBirdsBackground />
+      {/* Other components and content */}
+    </div>
+  );
+};
+
+export default App;
