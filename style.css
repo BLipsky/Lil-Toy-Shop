@@ -5,19 +5,20 @@
     border-radius: 3vw;
     background-color: rgb(255, 255, 255);
     width: 100%;
+    padding: 1vw;
   }
 .ttldesc {
     margin-top: 50px;
 }
 .ttl {
-    height: 20vw;
+    height: 15vw;
     border-bottom: 1px solid black;
-    font-size: 3vw;  
+    font-size: 2.5vw;  
     font-weight: 700;  
 }
 .ttls {
     color: rgb(217, 119, 33);
-    font-size: 3vw;  
+    font-size: 2.5vw;  
     font-weight: 700;  
     padding-top: 1vw;
     padding-bottom: 2vw;
@@ -28,6 +29,7 @@
     border-top: 1px solid black;
     font-size: 1.5vw;  
     font-weight: 100;  
+    padding-top: 1vw;
 
 }
 .buy {
@@ -83,7 +85,17 @@
 body, html {
     height: 100%;
 }
-
+.txt {
+  text-decoration: none;
+}
+.caracard {
+  border: .15vw solid black;
+  border-radius: 2vw;
+  margin-top: 10vw;
+  height: 22rem;
+  width: 120%;
+  margin-left: -8vw;
+}
 /* The hero image */
 .hero-image {
   background-image: url("https://www.shutterstock.com/image-vector/purple-cityscape-background-city-buildings-600nw-2296429971.jpg");
@@ -140,7 +152,6 @@ body, html {
   .col-75 {
     padding: 0 16px;
   }
-  
   .containerz {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;

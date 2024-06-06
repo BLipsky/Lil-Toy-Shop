@@ -122,16 +122,54 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 });
 
-import React from 'react';
-import FlockingBirdsBackground from 'flocking-birds-background';
+function generateTeamCards2() {
+  const teamCardsContainer2 = document.getElementById("teamCards2");
+  const selectedToy = localStorage.getItem('selectedToy');
 
-const App = () => {
-  return (
-    <div className="App">
-      <FlockingBirdsBackground />
-      {/* Other components and content */}
-    </div>
-  );
-};
+  const filteredMembers = teamMembers.filter(member => member.value !== selectedToy);
 
-export default App;
+  for (let i = 0; i < 3; i++) {
+    const member = filteredMembers[i];
+
+    const card = document.createElement("div");
+    card.classList.add("col-md-4");
+
+    card.innerHTML = `
+      <a href="shop.html" class="card-link" data-value="${member.value}">
+        <div class="card p-3 cardsizing">
+          <img src="${member.imgSrc}" class="card-img-top" alt="${member.name}">
+          <div class="card-body">
+            <h5 class="card-title txt">${member.name}</h5>
+          </div>
+        </div>
+      </a>
+    `;
+
+    teamCardsContainer2.appendChild(card);
+  }
+
+  document.querySelectorAll('.card-link').forEach(card => {
+    card.addEventListener('click', function(event) {
+      localStorage.setItem('selectedToy', this.getAttribute('data-value'));
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  generateTeamCards();
+
+  const selectedToy = localStorage.getItem('selectedToy');
+
+  if (selectedToy && products[selectedToy]) {
+    document.getElementById('ttl').textContent = products[selectedToy].title;
+    document.getElementById('dcs').textContent = products[selectedToy].description;
+    document.getElementById('mainimg').src = products[selectedToy].display;
+    document.getElementById('age').textContent = products[selectedToy].age;
+  } else {
+    document.getElementById('product-display').innerHTML = '<p>No item selected</p>';
+  }
+
+  generateTeamCards2();
+});
+
+window.onload = generateTeamCards2;
