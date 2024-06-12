@@ -40,6 +40,11 @@ const teamMembers = [
 function generateTeamCards() {
   const teamCardsContainer = document.getElementById("teamCards");
 
+  if (!teamCardsContainer) {
+    console.error("Element with ID 'teamCards' not found.");
+    return;
+  }
+
   teamMembers.forEach((member, index) => {
     const card = document.createElement("div");
     card.classList.add("col-md-4", "mb-4"); // Added 'mb-4' for margin bottom
@@ -49,7 +54,7 @@ function generateTeamCards() {
         <div class="card p-3 cardsizing">
           <img src="${member.imgSrc}" class="card-img-top" alt="${member.name}">
           <div class="card-body">
-            <h5 class="card-title">${member.name}</h5>
+            <h5 class="card-title fontH">${member.name}</h5>
             <p class="card-text">${member.description}</p>
           </div>
         </div>
@@ -66,7 +71,59 @@ function generateTeamCards() {
   });
 }
 
-window.onload = generateTeamCards;
+function generateTeamCards2() {
+  const teamCardsContainer2 = document.getElementById("teamCards2");
+
+  if (!teamCardsContainer2) {
+    console.error("Element with ID 'teamCards2' not found.");
+    return;
+  }
+
+  const selectedToy = localStorage.getItem('selectedToy');
+  const filteredMembers = teamMembers.filter(member => member.value !== selectedToy);
+
+  for (let i = 0; i < 3; i++) {
+    const member = filteredMembers[i];
+
+    const card = document.createElement("div");
+    card.classList.add("col-md-4");
+
+    card.innerHTML = `
+      <a href="shop.html" class="card-link" data-value="${member.value}">
+        <div class="card p-3 cardsizing">
+          <img src="${member.imgSrc}" class="card-img-top" alt="${member.name}">
+          <div class="card-body">
+            <h5 class="card-title txt">${member.name}</h5>
+          </div>
+        </div>
+      </a>
+    `;
+
+    teamCardsContainer2.appendChild(card);
+  }
+
+  document.querySelectorAll('.card-link').forEach(card => {
+    card.addEventListener('click', function(event) {
+      localStorage.setItem('selectedToy', this.getAttribute('data-value'));
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  generateTeamCards();
+  generateTeamCards2();
+
+  const selectedToy = localStorage.getItem('selectedToy');
+  if (selectedToy && products[selectedToy]) {
+    document.getElementById('ttl').textContent = products[selectedToy].title;
+    document.getElementById('dcs').textContent = products[selectedToy].description;
+    document.getElementById('mainimg').src = products[selectedToy].display;
+    document.getElementById('age').textContent = products[selectedToy].age;
+  } else {
+    document.getElementById('product-display').innerHTML = '<p>No item selected</p>';
+  }
+});
+
 let selected;
 
 function switchOne() {
@@ -106,70 +163,4 @@ let quotesArray = [
 ];
 
 let randomNumber = Math.floor(Math.random() * quotesArray.length);
-
 document.getElementById("press-quote").textContent = quotesArray[randomNumber].split("—")[0] + "  —" + quotesArray[randomNumber].split("—")[1];
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  const selectedItem = localStorage.getItem('selectedItem');
-  
-  if (selectedItem && products[selectedItem]) {
-    document.getElementById('ttl').textContent = products[selectedItem].title;
-    document.getElementById('dcs').textContent = products[selectedItem].description;
-    document.getElementById('mainimg').src = products[selectedItem].display;
-    document.getElementById('age').textContent = products[selectedItem].age;
-  } else {
-    document.getElementById('product-display').innerHTML = '<p>No item selected</p>';
-  }
-});
-
-function generateTeamCards2() {
-  const teamCardsContainer2 = document.getElementById("teamCards2");
-  const selectedToy = localStorage.getItem('selectedToy');
-
-  const filteredMembers = teamMembers.filter(member => member.value !== selectedToy);
-
-  for (let i = 0; i < 3; i++) {
-    const member = filteredMembers[i];
-
-    const card = document.createElement("div");
-    card.classList.add("col-md-4");
-
-    card.innerHTML = `
-      <a href="shop.html" class="card-link" data-value="${member.value}">
-        <div class="card p-3 cardsizing">
-          <img src="${member.imgSrc}" class="card-img-top" alt="${member.name}">
-          <div class="card-body">
-            <h5 class="card-title txt">${member.name}</h5>
-          </div>
-        </div>
-      </a>
-    `;
-
-    teamCardsContainer2.appendChild(card);
-  }
-
-  document.querySelectorAll('.card-link').forEach(card => {
-    card.addEventListener('click', function(event) {
-      localStorage.setItem('selectedToy', this.getAttribute('data-value'));
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  generateTeamCards();
-
-  const selectedToy = localStorage.getItem('selectedToy');
-
-  if (selectedToy && products[selectedToy]) {
-    document.getElementById('ttl').textContent = products[selectedToy].title;
-    document.getElementById('dcs').textContent = products[selectedToy].description;
-    document.getElementById('mainimg').src = products[selectedToy].display;
-    document.getElementById('age').textContent = products[selectedToy].age;
-  } else {
-    document.getElementById('product-display').innerHTML = '<p>No item selected</p>';
-  }
-
-  generateTeamCards2();
-});
-
-window.onload = generateTeamCards2;
