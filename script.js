@@ -153,14 +153,20 @@ itemSold.onchange = function () {
 };
 
 let quotesArray = [
-  "Little Bird Toy Shop is by far the most significant Toy Producer of the decade. — Anonymous",
+  "Little Bird Toy Shop is by far the most significant toy producer of the decade. — Anonymous",
   "These days playing at your desk is not just acceptable, it’s encouraged. — Anonymous",
   "Little Bird Toy Shop has changed the way people think about fun, on a grand scale. — Anonymous",
-  "Happiness increased 200% since Little Bird Toy Shop began promoting siestas. — Anonymous User",
-  "Little Bird Toy Shop has ushered in a new era of sleep. — Anonymous Customer",
-  "Not surprisingly, more siestas means more productivity. — Anonymous Person",
-  "Little Bird Toy Shop is doing the hard work of helping people get the rest they need. — Anonymous",
+  "Happiness increased 200% since Little Bird Toy Shop began promoting their products. — Anonymous User",
+  "Little Bird Toy Shop has ushered in a new era of fun. — Anonymous Customer",
+  "Not surprisingly, more fun means more productivity. — Anonymous Person",
+  "Little Bird Toy Shop is doing the hard work of helping people get the fun they need. — Anonymous",
 ];
 
-let randomNumber = Math.floor(Math.random() * quotesArray.length);
-document.getElementById("press-quote").textContent = quotesArray[randomNumber].split("—")[0] + "  —" + quotesArray[randomNumber].split("—")[1];
+window.onload = function() {
+  let randomNumber = Math.floor(Math.random() * quotesArray.length);
+  let selectedQuote = quotesArray[randomNumber].split("—");
+  let quoteContent = selectedQuote[0].trim();
+  let quoteAuthor = selectedQuote[1].trim();
+  
+  document.getElementById("press-quote").textContent = quoteContent + " — " + quoteAuthor;
+};
